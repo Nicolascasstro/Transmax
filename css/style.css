@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    /* Mantenga y respeto el modelo de caja para que no aumente las dimenciones */
+    box-sizing: border-box;
+}
+
+/* Esto es para crear variables */
+:root{
+   --primary-color:#ff7e44;
+   --secondary-color:#034b5a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+p,a,li,label,input{
+    font-family: 'Work Sans', sans-serif;
+}
+/* Estilos header o cabecera */
+header{
+    position: relative;
+    width: 100%;
+}
+
+header nav{
+    background-color: white;
+}
+/* Importante esta etiqueta para mantener todo previamente centrado */
+.container{ 
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    margin:5px 12px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: .4s;
+    padding: 4px;
+    font-size: 18px;
+}
+
+ul li a:hover{
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+/* Seudo clase forma de invocar diferentes selectores */
+
+ul li:nth-child(6) a{
+    background-color: var(--secondary-color);
+    padding: 12px 20px;
+    color: white;
+}
+
+
+ul li:nth-child(6) a:hover{
+    border: none;
+    background-color: var(--primary-color);
+}
+
+/* Imagen avion y textos */
+
+header #hero{
+    width: 100%;
+    background-image: url(../img/hero.png);
+    background-size: cover;
+    padding: 230px 0 280px;
+}
+
+#hero h1{
+    color: white;
+    font-size: 46px;
+    margin-bottom: 25px;
+}
+
+#hero p{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Botones */
+
+button{
+    cursor: pointer;
+}
+
+
+#hero .btn-primary{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 40px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 2px;
+}
+
+#hero .btn-secondary{
+    color: var(--primary-color);
+    padding: 20px 35px;
+    font-weight: 700;
+    border: none;
+    text-decoration: underline;
+    background: transparent;
+}
+
+/* Estilos Main o principal */
+
+main{
+    position: relative;
+    width: 100%;
+}
+
+main #section1{
+    background-color: #ffff;
+    position: relative;
+    width: 100%;
+    padding-bottom: 140px;
+}
+
+#section1 .fila article{
+    padding: 40px 50px;
+    text-align: left;
+    box-shadow: 0px 4px 8px -5px #999;
+}
+
+#section1 .fila article h2 img{
+    width: 60px;
+    margin-right: 20px;
+}
+
+/* Card 1 */
+
+.destacados article:nth-child(1){
+    background-color: #ffffff;
+}
+
+.fila article:nth-child(1) h2{
+    display: flex;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.fila article:nth-child(1) p{
+    padding-left: 80px;
+    margin-bottom: 15px;
+}
+
+.fila article:nth-child(1) button{
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    color: var(--primary-color);
+    padding: 8px 20px ;
+    font-weight:600;
+    border-left: 4px solid var(--primary-color);
+    border-right: 4px solid var(--primary-color);
+    margin-left: 80px;
+}
+
+/* Card 2 */
+
+.fila article:nth-child(2){
+    background-color: var(--secondary-color);
+}
+
+.fila article:nth-child(2) h2{
+    display: flex;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffff;
+}
+
+.fila article:nth-child(2) p{
+    padding-left: 80px;
+    margin-bottom: 15px;
+    color: #ffff;
+}
+
+.fila article:nth-child(2) button{
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    color: var(--primary-color);
+    padding: 8px 20px ;
+    font-weight:600;
+    border-left: 4px solid var(--primary-color);
+    border-right: 4px solid var(--primary-color);
+    margin-left: 80px;
+}
+
+/* Siguiente seccion foto una encima de otra y texto */
+
+#section1 .welcome{
+    padding-top: 200px;
+}
+
+#section1 .welcome article{
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.welcome .info{
+    width: 45%;
+    padding-right:30px ;
+}
+
+.welcome .info h3{
+    font-size: 40px;
+}
+
+.welcome .info strong{
+    color: var(--primary-color);
+}
+
+#section1 .welcome .info p{
+    padding-left: 0 !important;
+    margin-top: 14px;
+}
+
+#section1 .welcome article.info button{
+    background-color: #f5f5f5;
+    color: var(--secondary-color);
+    padding: 12px 40px;
+    margin-left: 0;
+    border: none;
+}
+
+/* Fotos */
+
+#section1 .welcome article.fotos{
+    position: relative;
+    background-color: white;
+}
+
+.welcome article.fotos div{
+    position: absolute;
+    z-index: 99;
+    bottom: -96px;
+    left: -82px;
+}
+
+.destacados{
+    position: absolute;
+    top: -40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+#section2{
+    padding: 120px 0 210px;
+    background-color: #f5f5f5;
+    width: 100%;
+    position: relative;
+}
+
+/* codigo diseño para titulo y boton */
+
+#section2 .info-section2{
+    width: 60%;
+}
+
+#section2 .info-section2 h3{
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+#section2 .info-section2 strong{
+   color: var(--primary-color);
+}
+
+#section2 .info-section2 p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: -80px;
+}
+
+#section2 .fila button{
+    background-color: var(--secondary-color);
+    padding: 20px 40px;
+    color: #ffff;
+    border: none;
+    border-radius: 10px;
+}
+
+#section2 .fila button:hover{
+    border: none;
+    background: var(--primary-color) ;
+}
+
+/* Codgigo para las tarjetas */
+
+#section2 .fila .card{
+    width: 50%;
+    max-width: 290px;
+    padding: 40px 40px;
+    box-shadow: 0px 4px 8px -5px #999;
+    margin-top: 50px;
+    border-bottom: 4px solid var(--primary-color);
+    background-color: #ffffff;
+    position: relative;
+}
+
+
+/* Seudo elementos para el hover */
+
+#section2 .fila .card::after{
+    width: 0;
+    height: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--secondary-color);
+    z-index: 1;
+    transition: .4s;
+}
+
+#section2 .fila .card:hover::after{
+    width: 100%;
+
+}
+
+#section2 .fila .card:hover h4,
+#section2 .fila .card:hover p,
+#section2 .fila .card:hover li{
+     color: white;
+}
+
+#section2 .fila .card img{
+    width: 60px;
+    z-index: 9;
+    position: relative;
+    transition: .4s;
+}
+
+#section2 .fila .card h4{
+    font-size: 25px;
+    margin-top: 14px;
+    margin-bottom: 20px;
+    z-index: 9;
+    position: relative;
+    transition: .4s;
+}
+
+#section2 .fila .card p{
+    font-weight: 400;
+    margin-left: -80px;
+    line-height: 25px;
+    position:relative;
+    z-index: 9;
+    transition: .4s;
+    
+}
+
+#section2 .fila .card ul{
+    padding-left: 20px;
+    margin-top: 14px;
+    position: relative;
+    z-index: 9;
+}
+
+#section2 .fila .card li{
+    margin: 10px 0;
+    font-weight: 400;
+    position: relative;
+    z-index: 9;
+}
+
+#section2 .fila .card:nth-child(3) p{
+    margin-left: 4px;
+}
+
+#section2 .fila .card:nth-child(2) p{
+   color: #000;
+}
+
+/* Diseño de el fondo transparente */
+
+#section3{
+    width: 100%;
+    position: relative;
+    background: url(../img/bg-section.jpg);
+    background-size: cover;
+}
+
+#section3 .fila .card-vertical{
+    width: 25%;
+    padding: 800px 40px 40px;
+    border-right: 1px solid white;
+    background: transparent;
+    transition: .4s;
+    position: relative;
+}
+
+#section3 .fila .card-vertical:hover{
+    background:#acacac40;
+    backdrop-filter: blur(7px);
+}
+
+#section3 .card-vertical h3{
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+#section3 .card-vertical h2{
+    color: white;
+    font-size: 34px;
+    margin-bottom: 14px;
+    text-align: initial;
+}
+
+#section3 .card-vertical:nth-child(3) p{
+    text-align: initial;
+    margin-left: auto;
+}
+
+#section3 .card-vertical:nth-child(4) p{
+    text-align: initial;
+    margin-left: auto;
+}
+
+#section3 .card-vertical p{
+    color: transparent;
+    margin-left: -80px;
+    margin-bottom: 14px;
+    font-size: 18px;
+    transition: .4s;
+}
+
+#section3 .card-vertical button{
+    margin-left: 10px;
+    background: #ffffff40;
+    color: white;
+    border: 0 transparent;
+    padding: 14px 20px;
+    font-size: 18px;
+}
+
+#section3 .card-vertical .info-card{
+    position: absolute;
+    bottom: 30px;
+    transition: .4s;
+}
+
+#section3 .card-vertical:hover .info-card{
+    bottom: 130px;
+}
+
+#section3 .card-vertical:hover p{
+    color: #ffffff;
+}
+
+#section4{
+    width: 100%;
+    padding: 200px 0;
+    position: relative;
+    text-align: center;
+    color: #ffff;
+    background: var(--secondary-color);
+}
+
+#section4 h2{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+#section4 h2 strong{
+    color: var(--primary-color);
+}
+
+#section4 p{
+    font-size: 18px;
+}
+
+#section5{
+    width: 100%;
+    padding: 200px 0;
+    position: relative;
+    text-align: center;
+}
+
+#section5 h2{
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+#section5 strong{
+    color: var(--primary-color);
+}
+
+#section5 p{
+    font-size: 18px;
+}
+
+#section5 .card-metas{
+    width: 25%;
+    text-align: center;
+    margin-top: 70px;
+}
+
+#section5 .card-metas i{
+    font-size: 60px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    transition: .4s;
+}
+
+#section5 .card-metas:hover i{
+    color: var(--secondary-color);
+}
+
+#section5 .card-metas h3{
+    font-size: 50px;
+    font-weight: 400;
+    color: #034b5a;
+    margin-bottom: 15px;
+}
+#section5 .card-metas h4{
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+#section5 .card-metas:nth-child(2){
+    background: white
+}
+
+#section5 .card-metas:nth-child(2) p{
+    color: #000;
+    text-align: auto;
+    margin-left: -55px;
+}
+
+#section5 .card-metas:nth-child(1) p{
+    text-align: auto;
+    margin-left: -55px;
+}
+
+footer{
+    padding: 40px 0;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
